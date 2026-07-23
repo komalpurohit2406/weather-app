@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    position:relative;
+}
+
+/* Floating circles */
+
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(5px);
+}
+
+body::before{
+    width:280px;
+    height:280px;
+    background:rgba(255,255,255,0.18);
+    top:-80px;
+    left:-60px;
+}
+
+body::after{
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,0.12);
+    bottom:-60px;
+    right:-40px;
+}
+
+/* Animated bubbles */
+
+.bubble{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    animation:float 12s infinite linear;
+}
+
+.b1{
+    width:90px;
+    height:90px;
+    left:8%;
+    bottom:-100px;
+    animation-duration:15s;
+}
+
+.b2{
+    width:60px;
+    height:60px;
+    left:85%;
+    bottom:-120px;
+    animation-duration:12s;
+}
+
+.b3{
+    width:120px;
+    height:120px;
+    left:55%;
+    bottom:-140px;
+    animation-duration:18s;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-110vh);
+    }
+
+}
+
+.container{
+
+    width:380px;
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:25px;
+    text-align:center;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    animation:appear 1s ease;
+}
+
+h1{
+
+    margin-bottom:25px;
+    color:#1b2a41;
+}
+
+input{
+
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    font-size:17px;
+}
+
+button{
+
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:10px;
+    background:#008cff;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#006fe6;
+    transform:scale(1.05);
+
+}
+
+img{
+
+    width:110px;
+}
+
+h2{
+
+    margin-top:15px;
+    color:#111;
+}
+
+h3{
+
+    font-size:38px;
+    margin:15px 0;
+}
+
+p{
+
+    margin:10px;
+    font-size:20px;
+}
+.loader{
+
+    display:none;
+
+    margin:20px auto;
+
+    border:6px solid rgba(255,255,255,.3);
+
+    border-top:6px solid white;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+@keyframes appear{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+#weatherResult{
+
+transition:.4s;
+
+}
+.footer{
+
+position:absolute;
+
+bottom:20px;
+
+color:white;
+
+font-size:15px;
+
+letter-spacing:1px;
+
+}

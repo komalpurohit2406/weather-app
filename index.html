@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Tech Tikitaka's Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+
+<div class="container">
+
+    <h1>Tech Tikitaka's Weather App</h1>
+
+    <input
+        type="text"
+        id="cityInput"
+        placeholder="🔍 Search any city...">
+
+    <br><br>
+
+    <button onclick="getWeather()">
+        Get Weather
+
+    </button>
+    <button onclick="getLocation()">
+        📍 Use My Location
+    </button>
+
+    <div id="loading" class="loader"></div>
+
+
+    <div id="weatherResult">
+
+    <div id="weatherResult">
+
+    <h2 id="cityName"></h2>
+
+    <p id="dateTime"></p>
+
+    <img id="weatherIcon">
+
+    <h1 id="temperature"></h1>
+
+    <p id="description"></p>
+
+    <p id="feelsLike"></p>
+
+    <p id="humidity"></p>
+
+    <p id="wind"></p>
+
+
+
+</div>
+
+<script src="script.js"></script>
+
+<p class="footer">
+Made with ❤️ by Team Tech Tikitaka
+</p>
+</body>
+
+</html>
